@@ -20,7 +20,7 @@ def merge(left, right):
     return result
 
 def merge_sort(l):
-    """ """
+    """divide the list into halves and call the merge function"""
     if len(l) > 1: 
         mid = len(l) // 2 
         left = merge_sort(l[:mid])
