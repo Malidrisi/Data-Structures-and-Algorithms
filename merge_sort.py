@@ -33,29 +33,29 @@ def mergeSort(l):
     """ """
     if len(l)>1:
         mid = len(l)//2
-        lefthalf = l[:mid]
-        righthalf = l[mid:]
-        mergeSort(lefthalf)
-        mergeSort(righthalf)
+        left = l[:mid]
+        right = l[mid:]
+        mergeSort(left)
+        mergeSort(right)
 
         i, j, k = 0, 0, 0
 
-        while i < len(lefthalf) and j < len(righthalf):
-            if lefthalf[i] < righthalf[j]:
-                l[k]=lefthalf[i]
+        while i < len(left) and j < len(right):
+            if left[i] < right[j]:
+                l[k]=left[i]
                 i=i+1
             else:
-                l[k]=righthalf[j]
+                l[k]=right[j]
                 j=j+1
             k=k+1
 
-        while i < len(lefthalf):
-            l[k]=lefthalf[i]
+        while i < len(left):
+            l[k]=left[i]
             i=i+1
             k=k+1
 
-        while j < len(righthalf):
-            l[k]=righthalf[j]
+        while j < len(right):
+            l[k]=right[j]
             j=j+1
             k=k+1
             
